@@ -3,6 +3,10 @@
 git_dir='$1'
 sub_dirs=`ls $git_dir | grep -v "\."`
 
+if test -n "$git_dir"; then
+	git_dir='~/git/'
+fi
+
 for i in $sub_dirs
 do
 	cd $git_dir/$i
