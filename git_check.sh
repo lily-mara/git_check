@@ -14,12 +14,7 @@ do
 	need_push=`echo $local_hash | grep -v $remote_hash | sed s/^//`
 
 	if test -n "$need_commit"; then
-		echo
-		echo
-		echo The status of $i is:
-		git status
-		echo
-		echo
+		echo $i needs commit
 	elif test -n "$need_push"; then
 		echo $i needs a push/pull
 	fi
