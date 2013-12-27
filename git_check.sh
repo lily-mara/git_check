@@ -1,6 +1,6 @@
 #!/bin/sh
 
-git_dir='/home/nate/git/'
+git_dir='$1'
 sub_dirs=`ls $git_dir | grep -v "\."`
 
 for i in $sub_dirs
