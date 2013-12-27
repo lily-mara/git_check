@@ -9,7 +9,9 @@ do
 	local_hash=`git rev-parse --verify master`
 	remote_hash=`git rev-parse --verify origin/master`
 
-	need_push=`echo $local_hash | grep -v $remote_hash`
-	echo $need_push
+	need_push=`echo $local_hash | grep -v $remote_hash | sed s/^//`
+	if test -n "$need_push"; then
+		echo $i needs a push/pull
+	fi
 
 done
