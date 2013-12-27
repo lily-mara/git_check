@@ -11,7 +11,7 @@ do
 	remote_hash=`git rev-parse --verify origin/master`
 
 	need_commit=`git status --short`
-	need_push=`echo $local_hash | grep -v $remote_hash | sed s/^//`
+	need_push=`echo $local_hash | grep -v $remote_hash`
 
 	if test -n "$need_commit"; then
 		echo $i needs commit
