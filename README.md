@@ -1,3 +1,8 @@
+NOTICE
+======
+
+This version of the script is depreciated, and has been added to my general [git scripts](https://github.com/natemara/git_scripts) repo.
+
 Git Checker
 ===========
 
